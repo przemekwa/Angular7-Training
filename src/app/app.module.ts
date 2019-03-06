@@ -1,3 +1,4 @@
+import { A2sCommModule } from 'a2s-comm';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,7 +11,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    A2sCommModule
   ],
   providers: [],
   bootstrap: [AppComponent]
