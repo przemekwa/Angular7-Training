@@ -12,7 +12,7 @@ export class PlanetDetectorComponent implements OnInit {
   y:number = 164;
 
 
-  distance = 0.5;
+  distance = 0.9;
 
   constructor() { }
 

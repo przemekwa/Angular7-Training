@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpaceModule } from './space/space.module';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -14,7 +15,8 @@ import { SpaceModule } from './space/space.module';
     BrowserModule,
     AppRoutingModule,
     A2sCommModule,
-    SpaceModule
+    SpaceModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
