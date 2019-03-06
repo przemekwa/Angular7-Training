@@ -6,9 +6,10 @@ import { HangarComponent } from './hangar/hangar.component';
 import { SpaceShipComponent } from './space-ship/space-ship.component';
 import { PilotComponent } from './pilot/pilot.component';
 import { PilotRoomComponent } from './pilot-room/pilot-room.component';
+import { PlanetDetectorComponent } from './planet-detector/planet-detector.component';
 
 @NgModule({
-  declarations: [HangarComponent, SpaceShipComponent, PilotComponent, PilotRoomComponent],
+  declarations: [HangarComponent, SpaceShipComponent, PilotComponent, PilotRoomComponent, PlanetDetectorComponent],
   imports: [
     CommonModule,
     SpaceRoutingModule
