@@ -11,9 +11,10 @@ import { PlanetDetectorComponent } from './planet-detector/planet-detector.compo
 import { EngineersRoomComponent } from './engineers-room/engineers-room.component';
 import { DecoderWavesComponent } from './decoder-waves/decoder-waves.component'
 import { SharedModule } from '../shared/shared.module';
+import { DestructionRoomComponent } from './destruction-room/destruction-room.component';
 
 @NgModule({
-  declarations: [HangarComponent, SpaceShipComponent, PilotComponent, PilotRoomComponent, PlanetDetectorComponent, EngineersRoomComponent, DecoderWavesComponent],
+  declarations: [HangarComponent, SpaceShipComponent, PilotComponent, PilotRoomComponent, PlanetDetectorComponent, EngineersRoomComponent, DecoderWavesComponent, DestructionRoomComponent],
   imports: [
     CommonModule,
     SpaceRoutingModule,
