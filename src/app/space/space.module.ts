@@ -7,16 +7,17 @@ import { SpaceShipComponent } from './space-ship/space-ship.component';
 import { PilotComponent } from './pilot/pilot.component';
 import { PilotRoomComponent } from './pilot-room/pilot-room.component';
 import { PlanetDetectorComponent } from './planet-detector/planet-detector.component';
-import { FormsModule } from '@angular/forms';
+
 import { EngineersRoomComponent } from './engineers-room/engineers-room.component';
 import { DecoderWavesComponent } from './decoder-waves/decoder-waves.component'
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [HangarComponent, SpaceShipComponent, PilotComponent, PilotRoomComponent, PlanetDetectorComponent, EngineersRoomComponent, DecoderWavesComponent],
   imports: [
     CommonModule,
     SpaceRoutingModule,
-    FormsModule
+    SharedModule
   ],
   exports: [
     HangarComponent
