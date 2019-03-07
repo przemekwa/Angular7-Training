@@ -3,5 +3,22 @@
   font-size: 27px;
   opacity: 0.6;
   margin: 10px;
-  width: 50%;
+
+
+}
+
+#rectangleBlue {
+  margin: 14px;
+  width: 29px;
+  height: 29px;
+  background:blue;
+  display: inline-block;
+}
+
+#rectangleGreen {
+  margin: 14px;
+  width: 29px;
+  height: 29px;
+  background:green;
+  display: inline-block;
 }

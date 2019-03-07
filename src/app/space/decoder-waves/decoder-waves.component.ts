@@ -20,16 +20,14 @@ export interface IResult {
 export class DecoderWavesComponent implements OnInit {
 
   resultList?:IResult[] = [];
-  solution :string = "1523";
+  solution :string = "3235";
 
   constructor() { }
 
 
 
   checkNumber(formValues: INumber) {
-
-    var res = mastermind.matchPins(this.solution, formValues.numbers);
-    console.log(formValues.numbers)
+    let res = mastermind.matchPins(this.solution, formValues.numbers);
 
     let res2:any[] = [];
 
