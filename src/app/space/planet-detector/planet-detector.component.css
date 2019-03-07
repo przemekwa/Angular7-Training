@@ -1,4 +1,10 @@
 img {
-    width: 40%;
+
     padding: 21px;
+    width: 303;
+    height: 166;
 }
+
+.crosshair {cursor: crosshair;}
+
+
