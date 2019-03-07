@@ -31,7 +31,7 @@ export class PlanetDetectorComponent {
 
     var img = new Image();
     img.src=this.imageUrl;
-    this.context.drawImage(img, 10, 10);
+    this.context.drawImage(img, 0, 0);
 
 
     this.context.beginPath();
