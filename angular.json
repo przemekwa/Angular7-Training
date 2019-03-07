@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+
             "outputPath": "dist/space-app",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -27,6 +28,7 @@
             ],
             "scripts": [],
             "es5BrowserSupport": true
+
           },
           "configurations": {
             "production": {
@@ -58,6 +60,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "proxyConfig": "api/proxy.conf.json",
             "browserTarget": "space-app:build"
           },
           "configurations": {

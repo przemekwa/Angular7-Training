@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-6">
+        <h1>Deszyfrator fal radiowych</h1>
+        <form #form="ngForm" (ngSubmit)="checkNumber(form.value)">
+            <input #numbersInput="ngModel" ngModel type="number" name="numbers" />
+
+
+        </form>
+
+
+
+    </div>
+    <div class="col-6">
+        <h1>Status</h1>
+    <p *ngFor="let item of resultList">
+<label> {{item.number}} {{item.pins[0]}} {{item.pins[1]}} {{item.pins[2]}} {{item.pins[3]}}</label>
+
+    </p>
+
+    </div>
+  </div>
+
