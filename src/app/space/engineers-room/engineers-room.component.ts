@@ -3,6 +3,7 @@ import { SpaceShipType } from '../space-ship-type.enum';
 import { OrderFormValue } from '../order-form-value';
 import { SpaceShip } from '../space-ship';
 import { SpaceShipService } from '../space-ship.service';
+import { map } from 'rxjs/operators';
 
 interface ShipType {
   label: string;
@@ -16,7 +17,7 @@ interface ShipType {
 })
 export class EngineersRoomComponent implements OnInit {
 
-  @Output() shipProduced = new EventEmitter<SpaceShip>();
+
 
   spaceShipTypes: ShipType [] = [
     {label: 'Myśliwiec', value: SpaceShipType.Fighter},
@@ -24,13 +25,16 @@ export class EngineersRoomComponent implements OnInit {
   ];
   isProducing: boolean;
 
+  shipsCount = this.spaceShipService.hangarShips.pipe(
+    map((ships) => ships.length)
+  );
+
   constructor(private spaceShipService: SpaceShipService) { }
 
   orderSpaceShips(formValues: OrderFormValue) {
     this.isProducing = true;
     this.spaceShipService.produceShips(formValues)
         .subscribe({
-          next: (ship) => this.shipProduced.emit(ship),
           complete: () => this.isProducing = false
         });
   }
