@@ -3,8 +3,13 @@
   font-size: 27px;
   opacity: 0.6;
   margin: 10px;
+  width: 50%;
 
 
+}
+
+.inLine {
+  display: inline-block
 }
 
 #rectangleBlue {

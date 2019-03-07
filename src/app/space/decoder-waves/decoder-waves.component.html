@@ -2,23 +2,18 @@
   <div class="col-6">
     <h1>Deszyfrator fal radiowych</h1>
 
-
     <form #form="ngForm" (ngSubmit)="checkNumber(form.value)">
       <input #numbersInput="ngModel" ngModel type="number" name="numbers" />
     </form>
   </div>
   <div class="col-6">
     <h1>Status</h1>
-
     <div class="resultWraper" *ngFor="let item of resultList; index as i">
-      <div style="display: inline-block">#{{ i }}: {{ item.number }}</div>
-
-      <div style="display: inline-block" *ngFor="let item2 of item.pins">
+      <div class="inLine">#{{ i+1 }}: {{ item.number }}</div>
+      <div class="inLine" *ngFor="let item2 of item.pins">
         <div *ngIf="item2 == 'B'" id="rectangleBlue"></div>
         <div *ngIf="item2 == 'G'" id="rectangleGreen"></div>
       </div>
-
-
     </div>
   </div>
 </div>
