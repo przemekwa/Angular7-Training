@@ -12,8 +12,9 @@
     </div>
     <div class="col-6">
         <h1>Status</h1>
-    <p *ngFor="let item of resultList">
-<label> {{item.number}} {{item.pins[0]}} {{item.pins[1]}} {{item.pins[2]}} {{item.pins[3]}}</label>
+    <p *ngFor="let item of resultList;index as i">
+
+<label class="result">#{{i}} {{item.number}} => {{item.pins[0]}} {{item.pins[1]}} {{item.pins[2]}} {{item.pins[3]}}</label>
 
     </p>
 

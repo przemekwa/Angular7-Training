@@ -1,13 +1,13 @@
-
+import * as mastermind from 'numeric-mastermind-solver-js';
 import { Component, OnInit } from '@angular/core';
 
 
 export interface INumber {
-  numbers: number;
+  numbers: string;
 }
 
 export interface IResult {
-  number: number;
+  number: string;
   pins:string[]
 }
 
@@ -20,7 +20,7 @@ export interface IResult {
 export class DecoderWavesComponent implements OnInit {
 
   resultList?:IResult[] = [];
-  solution :number = 1234;
+  solution :string = "1523";
 
   constructor() { }
 
@@ -28,8 +28,24 @@ export class DecoderWavesComponent implements OnInit {
 
   checkNumber(formValues: INumber) {
 
+    var res = mastermind.matchPins(this.solution, formValues.numbers);
+    console.log(formValues.numbers)
 
-    this.resultList.push({number:formValues.numbers, pins: ["R","B","Z", ""] });
+    let res2:any[] = [];
+
+    for (var _i = 0; _i < res.green; _i++) {
+
+      res2.push("G");
+  }
+
+  for (var _i = 0; _i < res.blue; _i++) {
+
+    res2.push("B");
+}
+
+
+
+    this.resultList.push({number:formValues.numbers, pins: res2 });
   }
   ngOnInit() {
 
