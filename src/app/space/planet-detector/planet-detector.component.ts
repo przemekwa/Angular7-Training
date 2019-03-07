@@ -22,8 +22,18 @@ export class PlanetDetectorComponent {
 
   constructor() {
 
+   this.generatePlanetPosition();
+  }
+
+  generatePlanetPosition() {
+
+
+      this.x =  Math.floor(Math.random() * 303),
+      this.y = Math.floor(Math.random() * 161)
 
   }
+
+
   drawPlanet() {
     this.found=true;
     console.log("Works")

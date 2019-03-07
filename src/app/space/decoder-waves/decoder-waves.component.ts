@@ -1,4 +1,4 @@
-import { Mastermind } from 'numeric-mastermind-solver-js';
+
 import { Component, OnInit } from '@angular/core';
 
 
@@ -27,16 +27,7 @@ export class DecoderWavesComponent implements OnInit {
 
 
   checkNumber(formValues: INumber) {
-    var mm = new Mastermind();
-    var guess = mm.getGuess();
 
-    var res = Mastermind.matchPins(this.solution, formValues.numbers);
-
-console.log(res.green);
-
-console.log(res.blue);
-
-     mm.feedPins(res.green, res.blue);
 
     this.resultList.push({number:formValues.numbers, pins: ["R","B","Z", ""] });
   }
