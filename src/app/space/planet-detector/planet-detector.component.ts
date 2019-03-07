@@ -17,12 +17,28 @@ export class PlanetDetectorComponent {
   y:number = 164;
   distance = 0.9;
 
+  found = false;
   private context: any;
 
   constructor() {
 
 
   }
+  drawPlanet() {
+    this.found=true;
+    console.log("Works")
+    const canvas = <HTMLCanvasElement>document.getElementById('test');
+
+    this.context = canvas.getContext('2d');
+    this.context.clearRect(0, 0, canvas.width, canvas.height);
+    this.context.beginPath();
+    this.context.arc(this.x, this.y, 10, 0, 2 * Math.PI);
+    this.context.fill();
+    this.context.stroke()
+
+
+  }
+
   draw(position:IPosition) {
     const canvas = <HTMLCanvasElement>document.getElementById('test');
 
@@ -32,6 +48,7 @@ export class PlanetDetectorComponent {
     var img = new Image();
     img.src=this.imageUrl;
     this.context.drawImage(img, 0, 0);
+
 
 
     this.context.beginPath();
